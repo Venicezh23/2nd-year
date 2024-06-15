@@ -1,0 +1,58 @@
+# Project: lab1
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = pt2_qn2_tempConv.o matrix-matrix.o greatestCommonDivisor.o findCharInStr.o arrayOps.o hypotenuseCalc.o distanceConverter.o centreTriangle.o hcfAndLcm.o getBasicSalary.o piSeries.o
+LINKOBJ  = pt2_qn2_tempConv.o matrix-matrix.o greatestCommonDivisor.o findCharInStr.o arrayOps.o hypotenuseCalc.o distanceConverter.o centreTriangle.o hcfAndLcm.o getBasicSalary.o piSeries.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = lab1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+pt2_qn2_tempConv.o: pt2_qn2_tempConv.cpp
+	$(CPP) -c pt2_qn2_tempConv.cpp -o pt2_qn2_tempConv.o $(CXXFLAGS)
+
+matrix-matrix.o: matrix-matrix.cpp
+	$(CPP) -c matrix-matrix.cpp -o matrix-matrix.o $(CXXFLAGS)
+
+greatestCommonDivisor.o: greatestCommonDivisor.cpp
+	$(CPP) -c greatestCommonDivisor.cpp -o greatestCommonDivisor.o $(CXXFLAGS)
+
+findCharInStr.o: findCharInStr.cpp
+	$(CPP) -c findCharInStr.cpp -o findCharInStr.o $(CXXFLAGS)
+
+arrayOps.o: arrayOps.cpp
+	$(CPP) -c arrayOps.cpp -o arrayOps.o $(CXXFLAGS)
+
+hypotenuseCalc.o: hypotenuseCalc.cpp
+	$(CPP) -c hypotenuseCalc.cpp -o hypotenuseCalc.o $(CXXFLAGS)
+
+distanceConverter.o: distanceConverter.cpp
+	$(CPP) -c distanceConverter.cpp -o distanceConverter.o $(CXXFLAGS)
+
+centreTriangle.o: centreTriangle.cpp
+	$(CPP) -c centreTriangle.cpp -o centreTriangle.o $(CXXFLAGS)
+
+hcfAndLcm.o: hcfAndLcm.cpp
+	$(CPP) -c hcfAndLcm.cpp -o hcfAndLcm.o $(CXXFLAGS)
+
+getBasicSalary.o: getBasicSalary.cpp
+	$(CPP) -c getBasicSalary.cpp -o getBasicSalary.o $(CXXFLAGS)
+
+piSeries.o: piSeries.cpp
+	$(CPP) -c piSeries.cpp -o piSeries.o $(CXXFLAGS)
